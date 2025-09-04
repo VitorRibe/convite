@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Convite: 1 ano do Antony Gabriel</title>
+  <meta name="description" content="Você é nosso convidado!">
+  <meta property="og:title" content="Convite: 1 ano do Antony Gabriel" />
+  <meta property="og:description" content="Você é nosso convidado!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/capa.jpg" />
+  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Portão de entrada para liberar áudio (autoplay só funciona após interação do usuário) -->
+  <div id="gate" class="gate">
+    <div class="gate-card">
+      <h1>Convite do Antony</h1>
+      <p>Toque em “Entrar” para acessar o convite.</p>
+      <button id="enterBtn" class="btn">Entrar</button>
+      <label class="mute">
+        <input type="checkbox" id="muteToggle"> Entrar sem música
+      </label>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <nav class="container row">
+      <a class="brand" href="#inicio">Antony Gabriel • 1 ano</a>
+      <button id="menuBtn" class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <ul id="menu" class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#detalhes">Detalhes</a></li>
+        <li><a href="#local">Local</a></li>
+        <li><a href="#presentes">Presentes</a></li>
+        <li><a href="#rsvp">Confirmar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="inicio" class="hero">
+    <div class="container">
+      <h1>É o 1º aninho do Antony Gabriel!</h1>
+      <p>8 de Novembro, às 12:00 horas</p>
+      <a class="btn" href="#rsvp">Confirmar presença</a>
+    </div>
+  </main>
+
+  <section id="detalhes" class="section">
+    <div class="container">
+      <h2>Venha comemorar o 1º aninho do nosso pequeno Antony!<br><br>
+        Será um dia cheio de alegria, brincadeiras e muita diversão para toda a família.<br><br>
+        Esperamos você para celebrar este momento especial conosco!</h2>
+    </div>
+  </section>
+
+  <section id="presentes" class="section">
+    <div class="container">
+      <h2>Presentes</h2>
+      <p>Se quiser me presentear, aqui estão algumas sugestões:</p>
+      <ul>
+        <li>Visto Tamanho 2 Anos ou G</li>
+        <li>Adoro brinquedos</li>
+        <li>Calço tamanho 19/20</li>
+      </ul>
+
+      <p>Ou contribua via PIX:</p>
+      <code id="pix">milenaribeirog@hotmail.com</code>
+      <button class="btn outline" id="copyPix">Copiar PIX</button>
+    </div>
+  </section>
+
+  <div class="side-by-side">
+    <section id="local" class="section">
+      <div class="container">
+        <h2>Local</h2>
+        <p>R. Santa Marta, 1170 - São Judas Tadeu. Montes Claros - MG, 39402-421</p>
+        <a class="btn" target="_blank" rel="noopener" href="https://maps.app.goo.gl/Ur5Y9zWrK6FpJA269">Abrir no Google Maps</a>
+      </div>
+    </section>
+
+    <section id="rsvp" class="section">
+      <div class="container">
+        <h2>Confirmar presença</h2>
+        <p>Mande um WhatsApp para a mamãe com seu nome e número de acompanhantes.</p>
+        <a class="btn" target="_blank" rel="noopener" href="https://wa.me/553897325979?text=Confirmo%20presen%C3%A7a%20no%20anivers%C3%A1rio%20do%20Antony Gabriel">Confirmar via WhatsApp</a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="container">Feito com ❤️ pela família</div>
+  </footer>
+
+  <!-- Música de fundo (adicione seu arquivo em assets/audio/musica.mp3) -->
+  <audio id="bgm" loop preload="auto">
+    <source src="assets/audio/Bita.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
