@@ -55,4 +55,33 @@
   document.querySelectorAll('section, main').forEach(el => {
     el.setAttribute('tabindex','-1');
   });
+
+  function startCountdown() {
+    const eventDate = new Date('2025-09-08T12:00:00-03:00'); // Ajuste o ano se necessário
+    const countdownEl = document.getElementById('countdown');
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = eventDate - now;
+
+      if (diff <= 0) {
+        countdownEl.textContent = "O evento já começou!";
+        clearInterval(timer);
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdownEl.textContent =
+        `${days}d ${hours}h ${minutes}m ${seconds}s para a festa!`;
+    }
+
+    updateCountdown();
+    const timer = setInterval(updateCountdown, 1000);
+  }
+
+  window.addEventListener('DOMContentLoaded', startCountdown);
 })();

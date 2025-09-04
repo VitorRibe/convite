@@ -38,7 +38,11 @@ body {
 
 /* Hero */
 .hero{
-  min-height: 70vh; display:grid; place-items:center;
+  position: relative;
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
   /* Glass effect */
   background: rgba(255, 255, 255, 1); /* cor */
   backdrop-filter: blur(10px);          /* desfoca o fundo */
@@ -50,14 +54,19 @@ body {
   font-size: clamp(28px, 4vw, 48px); 
   color: #edc500;
   margin: 0 0 8px; 
+  letter-spacing: 0.12em; /* aumenta o espaçamento entre as letras */
+  text-transform: uppercase; /* opcional: deixa tudo maiúsculo */
 }
 .hero p{ 
+  font-size:clamp(22px, 4vw, 22px); ;
   color: var(--muted); 
   margin: 0 0 20px; 
 }
 
 /* Centraliza o conteúdo da seção hero */
 .hero .container {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,6 +79,52 @@ body {
   background: #edc500; /* Escolha a cor desejada */
   color: #3b3b3b;      /* Cor do texto, se necessário */
   font-weight: 700; /* Negrito */
+  margin-top: 24px;
+  padding: 20px 40px;    /* aumenta o tamanho do botão */
+  font-size: 1.3em;      /* aumenta o tamanho do texto */
+}
+
+.hero-img {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none; /* imagens não bloqueiam clique nos botões */
+  width: 250px; /* ajuste conforme necessário */
+  opacity: 0.95;
+}
+
+
+/* trex */
+.hero-img-2 {
+  top: 605px;
+  left: 15%;
+}
+
+/* triceratops borboleta*/
+.hero-img-3 {
+  top: 595px;
+  right: 10%;
+  width: 320px;
+}
+
+/* triceratops sentado */
+.hero-img-4 {
+  top: 1545px;
+  left: 22%;
+}
+
+/* carnossauro */
+.hero-img-5 {
+  top: 1875px;
+  right: 19%;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .hero-img {
+    width: 70px;
+  }
+  .hero-img-top { left: 2%; }
+  .hero-img-bottom { right: 2%; }
 }
 
 /* Sections */
@@ -80,6 +135,7 @@ body {
 /* Centraliza e muda a cor do h2 na seção detalhes */
 #detalhes h2 {
   font-family: 'Fredoka One', cursive; 
+  letter-spacing: 0.12em; /* aumenta o espaçamento entre as letras */
   text-align: center;
   color: #4C2E0C; /* Escolha a cor desejada */
 }
@@ -90,11 +146,22 @@ body {
   padding: 12px 18px; border-radius: 999px; cursor: pointer; text-decoration:none;
   box-shadow: var(--shadow);
 }
-.btn:hover{ filter: brightness(0.95); }
-.btn.outline{
-  background: transparent; color: var(--fg); border: 1px solid #e5e7eb;
+.btn:hover{ 
+  filter: brightness(0.95); 
 }
-code#pix{ display:inline-block; padding:6px 8px; background:#f3f4f6; border-radius:8px; margin-right: 8px; }
+.btn.outline{
+  background: transparent; 
+  color: var(--fg); 
+  border: 1px solid #e5e7eb;
+}
+code#pix{ 
+  display:inline-block; 
+  padding:6px 8px; 
+  max-width: 100%;
+  background:#f3f4f6; 
+  border-radius:8px; 
+  margin-right: 8px; 
+}
 
 /* Footer */
 .footer {
@@ -133,7 +200,7 @@ code#pix{ display:inline-block; padding:6px 8px; background:#f3f4f6; border-radi
   gap: 32px;
   justify-content: center;
   align-items: flex-start;
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -156,4 +223,165 @@ code#pix{ display:inline-block; padding:6px 8px; background:#f3f4f6; border-radi
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.countdown {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #edc500;
+  margin-bottom: 12px;
+}
+
+.gift-options {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 32px 0 24px 0;
+}
+
+.gift-box {
+  font-family: 'Fredoka One', 'Baloo 2', cursive, sans-serif;
+  padding: 18px 28px;
+  border-radius: 40px;
+  font-style: normal;
+  font-size: 1.5em;
+  width: 800px;           /* ocupa toda a largura da overlay-box */
+  max-width: none;       /* remove limite de largura */
+  position: relative;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.gift-box.left {
+  background: #ffe066;
+  align-self: flex-start;
+  color: #228be6;
+  border-left: 6px solid #edc500;
+  border-right: none;
+  margin-right: auto;    /* cola na esquerda */
+}
+
+.gift-box.right {
+  background: #228be6;
+  align-self: flex-end;
+  color: #ffe066;
+  border-right: 6px solid #228be6;
+  border-left: none;
+  margin-left: auto;     /* cola na direita */
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 600px) {
+  .gift-box {
+    max-width: 100%;
+    padding: 14px 12px;
+    font-size: 1em;
+  }
+}
+
+#presentes {
+  min-height: 00vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Remove o padding extra da section */
+}
+
+#presentes h2 {
+  font-family: 'Fredoka One', 'Baloo 2', cursive, sans-serif;
+  font-size: 3.5em; /* ajuste conforme o tamanho do h1 do início */
+  letter-spacing: 0.12em; /* aumenta o espaçamento entre as letras */
+  font-weight: 700;
+  text-align: center;
+  color: #228be6; /* Escolha a cor desejada */
+  margin-bottom: 18px;
+}
+
+#presentes p {
+  font-family: 'Fredoka One', 'Baloo 2', cursive, sans-serif;
+  font-size: 2.0em; /* ajuste conforme o tamanho do h1 do início */
+  letter-spacing: 0.12em; /* aumenta o espaçamento entre as letras */
+  font-weight: 100;
+  text-align: center;
+  color: #4C2E0C; /* Escolha a cor desejada */
+  margin-bottom: 18px;
+}
+
+/* Aumenta o botão Copiar PIX */
+#presentes .btn,
+#presentes .btn.outline {
+  font-size: 1.0em;
+  background-color: #228be6;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 18px 36px;
+}
+
+/* Aumenta a chave PIX */
+#presentes code#pix {
+  font-size: 1.5em;
+  padding: 12px 18px;
+  margin-bottom: 18px;
+  border-right: 60px;
+}
+
+.white-box {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  padding: 32px 24px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  min-height: 200px;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Adicionando a classe .btn ao link de confirmação */
+.btn {
+  display: inline-block;
+  border: 0;
+  background: var(--brand);
+  color: var(--brand-contrast);
+  padding: 12px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+  margin: 24px 0;
+}
+
+.btn:hover {
+  filter: brightness(0.95);
+}
+
+.btn.outline {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid #e5e7eb;
+}
+
+/* Estilo específico para o botão "Confirmar presença" */
+.btn.confirmar-presenca {
+  background: #edc500;
+  color: #3b3b3b;
+  padding: 16px 32px;
+  font-size: 1.2em;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn.confirmar-presenca:hover {
+  background: #d4b600;
+  transform: translateY(-2px);
+}
+
+.btn.confirmar-presenca:active {
+  transform: translateY(0);
 }
