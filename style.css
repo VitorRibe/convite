@@ -48,6 +48,10 @@ body {
   backdrop-filter: blur(10px);          /* desfoca o fundo */
   -webkit-backdrop-filter: blur(10px);  /* compatibilidade Safari */
   border-top: 1px solid rgba(255, 255, 255, 1); /* borda suave */
+  background-image: url('assets/img/tela1.png'); /* caminho da nova imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .hero h1{  
   font-family: 'Fredoka One', cursive; 
