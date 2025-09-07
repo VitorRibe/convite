@@ -96,31 +96,22 @@ body {
   opacity: 0.95;
 }
 
-
-/* trex */
-.hero-img-2 {
-  top: 605px;
-  left: 15%;
-}
-
 /* triceratops borboleta*/
 .hero-img-3 {
-  top: 595px;
-  right: 10%;
-  width: 22%;
+  top: 160%;
+  right: 3%;
 }
 
 /* triceratops sentado */
 .hero-img-4 {
-  top: 1545px;
-  left: 22%;
-  width: 22%;
+  top: 199%;
+  right: 3%;
 }
 
 /* carnossauro */
 .hero-img-5 {
-  top: 1875px;
-  right: 19%;
+  top: 242%;
+  right: 2%;
 }
 
 /* Responsivo */
@@ -128,6 +119,18 @@ body {
   .hero-img {
     width: 60px;
     max-width: 30vw;
+  }
+  .hero-img-3 {
+    width: 120px !important;   /* ajuste conforme necessário */
+    max-width: 60vw !important;
+  }
+  .hero-img-4 {
+    width: 150px !important;   /* ajuste conforme necessário */
+    max-width: 60vw !important;
+  }
+  .hero-img-5 {
+    width: 170px !important;   /* ajuste conforme necessário */
+    max-width: 60vw !important;
   }
   .hero-img-top { left: 2%; }
   .hero-img-bottom { right: 2%; }
