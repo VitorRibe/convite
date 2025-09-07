@@ -98,20 +98,20 @@ body {
 
 /* triceratops borboleta*/
 .hero-img-3 {
-  top: 160%;
-  right: 3%;
+  top: 158%;
+  right: 2%;
 }
 
 /* triceratops sentado */
 .hero-img-4 {
-  top: 199%;
+  top: 191%;
   right: 3%;
 }
 
 /* carnossauro */
 .hero-img-5 {
-  top: 242%;
-  right: 2%;
+  top: 234%;
+  right: 1%;
 }
 
 /* Responsivo */
@@ -334,6 +334,7 @@ code#pix{
 /* Aumenta o botão Copiar PIX */
 #presentes .btn,
 #presentes .btn.outline {
+  margin: 8px 0;
   font-size: 1.0em;
   background-color: #228be6;
   color: #ffffff;
