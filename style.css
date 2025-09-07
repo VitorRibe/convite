@@ -309,7 +309,7 @@ code#pix{
   align-items: center;
   justify-content: center;
   padding: 0; /* Remove o padding extra da section */
-  scroll-margin-top: 100px; /* ajuste conforme a altura do seu header/topbar */
+  scroll-margin-top: 500px; /* ajuste conforme a altura do seu header/topbar */
 }
 
 #presentes h2 {
