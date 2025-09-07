@@ -107,13 +107,14 @@ body {
 .hero-img-3 {
   top: 595px;
   right: 10%;
-  width: 320px;
+  width: 50%;
 }
 
 /* triceratops sentado */
 .hero-img-4 {
   top: 1545px;
   left: 22%;
+  width: 50%;
 }
 
 /* carnossauro */
